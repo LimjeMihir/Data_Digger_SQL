@@ -5,38 +5,42 @@ This project contains the SQL scripts for setting up and managing a database for
 
 Database Structure
 Tables:
-Customers
+Customers:
 
-Stores customer details.
+- Stores customer details.
 Fields:
-CustomerID: Unique identifier for each customer (Primary Key).
-Name: Name of the customer.
-Address: Address of the customer.
-Orders
+- CustomerID: Unique identifier for each customer (Primary Key).
+- Name: Name of the customer.
+- Address: Address of the customer.
+
+Orders:
 
 Stores information related to customer orders.
 Fields:
-OrderID: Unique identifier for each order (Primary Key).
-CustomerID: References the CustomerID from the Customers table.
-OrderDate: The date when the order was placed.
-TotalAmount: The total amount for the order.
-Products
+- OrderID: Unique identifier for each order (Primary Key).
+- CustomerID: References the CustomerID from the Customers table.
+- OrderDate: The date when the order was placed.
+- TotalAmount: The total amount for the order.
+
+Products:
 
 Stores information about the products available for purchase.
 Fields:
-ProductID: Unique identifier for each product (Primary Key).
-ProductName: Name of the product.
-Price: Price of the product.
-Stock: Number of items in stock.
-OrderDetails
+- ProductID: Unique identifier for each product (Primary Key).
+- ProductName: Name of the product.
+- Price: Price of the product.
+- Stock: Number of items in stock.
+  
+OrderDetails:
 
 Stores details about the products ordered in each order.
 Fields:
-OrderDetailID: Unique identifier for each order detail (Primary Key).
-OrderID: References the OrderID from the Orders table.
-ProductID: References the ProductID from the Products table.
-Quantity: Number of products ordered.
-SubTotal: Total cost for the particular product (Quantity * Price).
+- OrderDetailID: Unique identifier for each order detail (Primary Key).
+- OrderID: References the OrderID from the Orders table.
+- ProductID: References the ProductID from the Products table.
+- Quantity: Number of products ordered.
+- SubTotal: Total cost for the particular product (Quantity * Price).
+  
 SQL Scripts
 1. Database Setup
 The Abc_company database is created along with four primary tables (Customers, Orders, Products, and OrderDetails). SQL queries for creating the tables, defining relationships (foreign keys), and inserting initial records are provided.
@@ -52,6 +56,7 @@ Retrieve orders by a specific customer.
 Retrieve products sorted by price.
 Retrieve order details for specific orders.
 Retrieve orders placed in the last 30 days.
+
 4. Update and Delete Operations
 There are UPDATE and DELETE queries to demonstrate how to modify or delete records:
 
@@ -59,6 +64,7 @@ Update customer addresses.
 Delete a customer using CustomerID.
 Update an order's total amount.
 Delete products if they are out of stock.
+
 5. Aggregate Functions
 The SQL queries use aggregate functions like MAX(), MIN(), AVG(), SUM(), and COUNT() to perform analysis, such as:
 
