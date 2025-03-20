@@ -1,11 +1,11 @@
-DATA_DIGGER 
+- DATA_DIGGER 
 
 Abc_Company Database.....
 This project contains the SQL scripts for setting up and managing a database for "Abc_Company". The database tracks customers, orders, products, and order details for an e-commerce company. It is built using basic relational database concepts, including tables, foreign keys, and various SQL queries for data manipulation.
 
 Database Structure
--- Tables:
-- Customers:
+
+Tables:Customers:
 
 - Stores customer details.
 Fields:
@@ -13,7 +13,7 @@ Fields:
 - Name: Name of the customer.
 - Address: Address of the customer.
 
-- Orders:
+Orders:
 
 Stores information related to customer orders.
 Fields:
@@ -22,7 +22,7 @@ Fields:
 - OrderDate: The date when the order was placed.
 - TotalAmount: The total amount for the order.
 
-- Products:
+Products:
 
 Stores information about the products available for purchase.
 Fields:
@@ -31,7 +31,7 @@ Fields:
 - Price: Price of the product.
 - Stock: Number of items in stock.
   
-- OrderDetails:
+OrderDetails:
 
 Stores details about the products ordered in each order.
 Fields:
